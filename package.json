@@ -1,5 +1,5 @@
 {
-  "name": "express",
+  "name": "react-isomorphic-test",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -10,8 +10,7 @@
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
     "test": "eslint src && flow && jest --coverage",
     "prod:build": "rimraf lib dist && babel src -d lib --ignore .test.js && cross-env NODE_ENV=production webpack -p --progress",
-    "prod:start": "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
-    "prod:stop": "pm2 delete server",
+    "prod:start": "heroku local",
     "precommit": "yarn test",
     "prepush": "yarn test && yarn prod:build"
   },
